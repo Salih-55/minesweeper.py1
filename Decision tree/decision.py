@@ -50,7 +50,7 @@ tree = {feature: {}}
 for val in np.unique(X[:, feature]):
     sub_X, sub_y = X[X[:, feature] == val], y[X[:, feature] == val]
 tree[feature][val] = self.build_tree(sub_X, sub_y, depth + 1) if len(sub_y) > 0 else np.bincount(y).argmax()
-return tree
+return tree #
 
 
 def fit(self, X, y):
